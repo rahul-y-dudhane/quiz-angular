@@ -4,8 +4,8 @@
   color: azure;
   }
 
-  .test-list-tile {
-    background: linear-gradient(50deg,#8ef9fe,#263238)!important;
+  .test-list-tile[class]{
+    background: linear-gradient(50deg,#8ef9fe,#263238);
     color: azure;
   }
 
@@ -18,16 +18,16 @@
     border-radius: 5px;
   }
 
-.javascript-card{
-  background: linear-gradient(50deg,#2ec6ff,#303f9f)!important;
+.javascript-card[class]{
+  background: linear-gradient(50deg,#2ec6ff,#303f9f);
 }
-.react-card{
-  background: linear-gradient(50deg,#c5d429,#2e7d32)!important;
+.react-card[class]{
+  background: linear-gradient(50deg,#c5d429,#2e7d32);
 }
-.angular-card{
-  background: linear-gradient(50deg,#ff9e80,#d50000)!important;
+.angular-card[class]{
+  background: linear-gradient(50deg,#ff9e80,#d50000);
   
 }
-.node-card{
-  background: linear-gradient(50deg,#ffba3a,#e65100)!important;
+.node-card[class]{
+  background: linear-gradient(50deg,#ffba3a,#e65100)
 }
