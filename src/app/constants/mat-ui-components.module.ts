@@ -1,4 +1,8 @@
-import { MatGridListModule,MatCardModule } from "@angular/material";
+import { MatGridListModule,MatCardModule,
+        MatListModule,
+        MatPaginatorModule,
+        MatIconModule,
+    MatRadioModule } from "@angular/material";
 import { NgModule } from '@angular/core';
 
 /**
@@ -8,11 +12,19 @@ import { NgModule } from '@angular/core';
 @NgModule({
     imports:[
         MatGridListModule,
-        MatCardModule
+        MatCardModule,
+        MatListModule,
+        MatPaginatorModule,
+        MatIconModule,
+        MatRadioModule
     ],
     exports:[
         MatGridListModule,
-        MatCardModule
+        MatCardModule,
+        MatListModule,
+        MatPaginatorModule,
+        MatIconModule,
+        MatRadioModule
     ]
 })
 export class MatUiComponents{

@@ -2,16 +2,20 @@
   background: #282B7A;
   background-image: url('../../assets/dimondBck.png');
   color: azure;
+  flex-flow: wrap;
+  height: 250px;
   }
 
   .test-list-tile[class]{
     background: linear-gradient(50deg,#8ef9fe,#263238);
     color: azure;
-  }
+    height: 425px;
+    flex-flow: wrap;
 
+  }
+  
    .section-card{
     width: 250px;
-    margin: 10px;
     cursor: pointer;
     color: white;
     box-shadow: 5px 5px 50px black;
