@@ -13,7 +13,6 @@
     "src/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "src/config/environment/index.ts"
+    "node_modules"
   ]
 }

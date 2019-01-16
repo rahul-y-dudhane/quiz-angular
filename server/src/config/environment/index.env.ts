@@ -1,5 +1,7 @@
+import { dbURL }from '../../../environment';
+
 const config = {
-    dbURL: 'mongodb://localhost/warriors'
+    dbURL
 }
 
 Object.seal(config);
