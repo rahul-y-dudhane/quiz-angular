@@ -6,15 +6,38 @@
     {{attempts*5}} Marks!
   </h1>
 </div>
+
 <div *ngIf="wrongAttempt" class="correct-answer incorrect-answer" fxLayout="row" fxLayoutWrap fxLayoutAlign="center center">
   <h1>
     Sorry! {{attempts}} attempts remaining
   </h1>
 </div>
+
+<div *ngIf="timeWarning" class="correct-answer incorrect-answer" fxLayout="row" fxLayoutWrap fxLayoutAlign="center center">
+  <h1>
+    You have only 10 seconds remaining
+  </h1>
+</div>
+
+<div *ngIf="quizEnd" class="correct-answer result-msg" fxLayout="row" fxLayoutWrap fxLayoutAlign="center center">
+  <h1>
+    Successfully completed with &nbsp;
+  </h1>
+  <h1>
+    {{marks}} &nbsp; Marks!
+  </h1>
+</div>
+
 <div class="container-fluid quiz-title" fxLayout="column" fxLayoutWrap fxLayoutAlign="space-around center">
   <div fxFlex="20%" fxLayout="row" fxFlexAlign="stretch" fxLayoutAlign="center">
-    <span fxFlex="50%" fxLayoutAlign="end">2:30</span>
-    <span fxFlex="50%" fxLayoutAlign="end">Score: {{marks}}</span>
+    <span fxFlex="55%" fxLayoutAlign="end">
+      <h3>{{h | number:'2.0'}} : {{m | number:'2.0'}} : {{s | number:'2.0'}}</h3>
+    </span>
+    <span fxFlex="45%" fxLayoutAlign="end">
+      <h3>
+        Score: {{marks}}
+      </h3>
+    </span>
   </div>
   <div fxFlex="80%" fxLayout="row" fxLayoutAlign="center center">
     <mat-card class="title-card">
@@ -22,6 +45,7 @@
     </mat-card>
   </div>
 </div>
+
 <div class="container-fluid quiz-secion" fxLayout="column" fxLayoutWrap fxLayoutAlign="center">
 
   <div fxLayout="column" fxFlex="100%" fxLayoutWrap fxLayoutAlign="center center">
