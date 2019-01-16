@@ -1,5 +1,5 @@
 const config = {
-    dbURL: 'mongodb://localhost/warriors'
+    dbURL: 'mongodb://localhost/quiz'
 }
 
 Object.seal(config);
