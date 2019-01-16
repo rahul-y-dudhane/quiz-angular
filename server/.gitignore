@@ -43,4 +43,4 @@ testem.log
 Thumbs.db
 
 #Environement
-/src/**/environment/
+index.env.ts
