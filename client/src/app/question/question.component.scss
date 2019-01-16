@@ -18,13 +18,13 @@
     border-radius: 5px;
     background: linear-gradient(50deg,#ffba3a,#e65100)
   }
-  .paginator-bar{
+.paginator-bar{
       background: transparent;
       color: white;
       display: flex;
       justify-content: center;  
   }
-  .correct-answer{
+.correct-answer{
       opacity: 0.5;
       color: green;
       animation-duration: 1.5s;
@@ -32,19 +32,36 @@
       position: fixed;
       z-index: 100;
       height: -webkit-fill-available;
-    width: -webkit-fill-available;
+      width: -webkit-fill-available;
   }
-  .incorrect-answer{
+.incorrect-answer{
       color: red;
 }
+.result-msg{
+        opacity: 1;
+        color: white;
+        background: linear-gradient(50deg,#a9dc7b,#00796b);
+        animation: zoomIn;
+}
  
-  @keyframes fadeAndScale {
+@keyframes fadeAndScale {
     from {
         opacity: 1;
         transform: scale(2, 2);
     }
     to {
         opacity: 0;
+        transform: scale(0, 0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(2, 2);
+    }
+    to {
+        opacity: 1;
         transform: scale(0, 0);
     }
 }
