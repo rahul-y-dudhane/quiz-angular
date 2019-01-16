@@ -1,7 +1,6 @@
 import express = require('express');
 
-import HeroRoutes = require('./../HeroRoutes');
-import SpartanRoutes = require('./../SpartanRoutes');
+import HeroRoutes = require('../HeroRoutes');
 
 var app = express();
 
@@ -9,7 +8,6 @@ class BaseRoutes {
 
     get routes() {
         app.use("/", new HeroRoutes().routes);
-        app.use("/", new SpartanRoutes().routes);
         return app;
     }
 }
