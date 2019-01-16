@@ -1,0 +1,50 @@
+.answer{
+    cursor: pointer;
+}
+.quiz-title{
+    height:150px;
+    background: #282C69;
+    background-image: url('../../assets/dimondBck.png');
+    color: azure;
+}
+.quiz-secion[class]{
+    height:525px;
+    color: white;
+    background: linear-gradient(50deg,#a9dc7b,#00796b);
+}
+.title-card{
+    color: white;
+    box-shadow: 5px 5px 25px gray;
+    border-radius: 5px;
+    background: linear-gradient(50deg,#ffba3a,#e65100)
+  }
+  .paginator-bar{
+      background: transparent;
+      color: white;
+      display: flex;
+      justify-content: center;  
+  }
+  .correct-answer{
+      opacity: 0.5;
+      color: green;
+      animation-duration: 1.5s;
+      animation-name: fadeAndScale;
+      position: fixed;
+      z-index: 100;
+      height: -webkit-fill-available;
+    width: -webkit-fill-available;
+  }
+  .incorrect-answer{
+      color: red;
+}
+ 
+  @keyframes fadeAndScale {
+    from {
+        opacity: 1;
+        transform: scale(2, 2);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0, 0);
+    }
+}

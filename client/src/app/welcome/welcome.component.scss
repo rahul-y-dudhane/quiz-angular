@@ -1,0 +1,37 @@
+.welcome-tile {
+  background: #282B7A;
+  background-image: url('../../assets/dimondBck.png');
+  color: azure;
+  flex-flow: wrap;
+  height: 250px;
+  }
+
+  .test-list-tile[class]{
+    background: linear-gradient(50deg,#8ef9fe,#263238);
+    color: azure;
+    height: 425px;
+    flex-flow: wrap;
+
+  }
+  
+   .section-card{
+    width: 250px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 5px 5px 50px black;
+    border-radius: 5px;
+  }
+
+.javascript-card[class]{
+  background: linear-gradient(50deg,#2ec6ff,#303f9f);
+}
+.react-card[class]{
+  background: linear-gradient(50deg,#c5d429,#2e7d32);
+}
+.angular-card[class]{
+  background: linear-gradient(50deg,#ff9e80,#d50000);
+  
+}
+.node-card[class]{
+  background: linear-gradient(50deg,#ffba3a,#e65100)
+}

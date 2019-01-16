@@ -1,0 +1,50 @@
+<div class="container-fluid welcome-tile" fxLayout="column" fxLayoutWrap fxLayoutAlign="space-around center">
+  <div fxFlex>
+    <h1>Welcome to Programming Quiz</h1>
+  </div>
+  <div fxFlex>
+    <h2>Are you ready to test your skills?</h2>
+  </div>
+  <div fxFlex>
+    <p>Explore more for quiz</p>
+  </div>
+</div>
+
+<div class="container-fluid test-list-tile" fxLayout="row" fxLayoutAlign="space-around center">
+  <mat-card class="javascript-card section-card" fxLayoutAlign="space-around center" fxLayout="column" 
+  [routerLink]="['/test','javascript']">
+    <mat-card-title>
+      JavaScript
+    </mat-card-title>
+    <mat-card-content>
+      Take a test
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="angular-card section-card" fxLayoutAlign="space-around center" fxLayout="column" 
+  [routerLink]="['/test','angular']">
+    <mat-card-title>
+      Angular
+    </mat-card-title>
+    <mat-card-content>
+      Take a test
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="react-card section-card" fxLayout="column" fxLayoutAlign="space-around center" 
+  [routerLink]="['/test','reactjs']" >
+    <mat-card-title>
+      React.js
+    </mat-card-title>
+    <mat-card-content>
+      Take a test
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="node-card section-card" fxLayout="column" fxLayoutAlign="space-around center" 
+  [routerLink]="['/test','nodejs']" >
+    <mat-card-title>
+      Node.js
+    </mat-card-title>
+    <mat-card-content>
+      Take a test
+    </mat-card-content>
+  </mat-card>
+</div>
