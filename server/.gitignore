@@ -43,4 +43,4 @@ testem.log
 Thumbs.db
 
 #Environement
-/constants/environement
+/src/config/environment/index.ts
