@@ -1,4 +1,6 @@
 import express = require('express');
+require('dotenv').config();
+
 import Middlewares = require('./config/middlewares/base/MiddlewaresBase');
 
 const app = express();
