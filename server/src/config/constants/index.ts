@@ -1,4 +1,4 @@
-import { dbURL } from '../environment/index.env';
+import { dbURL } from '../../../environment/';
 
 class Constants {
     static DB_CONNECTION_STRING: string = dbURL;
