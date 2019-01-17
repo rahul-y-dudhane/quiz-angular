@@ -14,7 +14,7 @@ export class WelcomeComponent implements OnInit {
 
   constructor(private userService: UserService,public dialog: MatDialog,private router: Router) {
     userService.getAllUsers().subscribe((data) => {
-      console.log("user list "+data);
+      
     })
    }
 
@@ -29,8 +29,6 @@ export class WelcomeComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if(result){
-        console.log("this.userName",result);
-        
         this.router.navigate([`/test/${section}/${result}`]);
       }
       

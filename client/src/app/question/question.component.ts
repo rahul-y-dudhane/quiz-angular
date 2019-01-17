@@ -133,7 +133,11 @@ export class QuestionComponent implements OnInit {
       this.attempts = 3;
     } else {
       this.quizEnd = true;
-      this.saveUserDetails()
+      
+      setTimeout(()=>{
+        this.saveUserDetails()
+      },2000
+      )
     }
   }
 
