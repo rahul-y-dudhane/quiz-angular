@@ -14,7 +14,7 @@
 
 <div class="container-fluid test-list-tile" fxLayout="row" fxLayoutAlign="space-around center">
   <mat-card  class="javascript-card section-card" 
-  fxLayoutAlign="space-around center" fxLayout="column" [routerLink]="['/test','javascript']">
+  fxLayoutAlign="space-around center" fxLayout="column" (click)="openDialog('javascript')">
   <mat-card-title>
     JavaScript
   </mat-card-title>
@@ -34,7 +34,7 @@
     </mat-card-content>
   </mat-card>
   <mat-card class="react-card section-card" fxLayout="column" fxLayoutAlign="space-around center" 
-  [routerLink]="['/test','reactjs']" >
+  (click)="openDialog('reactjs')" >
     <mat-card-title>
       React.js
     </mat-card-title>
@@ -43,7 +43,7 @@
     </mat-card-content>
   </mat-card>
   <mat-card class="node-card section-card" fxLayout="column" fxLayoutAlign="space-around center" 
-  [routerLink]="['/test','nodejs']" >
+  (click)="openDialog('nodejs')" >
     <mat-card-title>
       Node.js
     </mat-card-title>

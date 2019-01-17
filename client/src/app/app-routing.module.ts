@@ -9,7 +9,7 @@ const routes: Routes = [
     component:WelcomeComponent
   },
   {
-    path:'test/:section',
+    path:'test/:section/:username',
     component:QuestionComponent
   },
   {

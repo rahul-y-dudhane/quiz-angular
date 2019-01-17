@@ -12,4 +12,11 @@ export class UserService{
         return this.http.get(`${AppData.SERVER_URL}/allUsers`);
     }
 
+    /**
+     * @function sendUserDetails
+     * @description send user details to server
+     */ 
+    sendUserDetails(user:User){
+        return this.http.post(`${AppData.SERVER_URL}/user`,user);
+    }
 }

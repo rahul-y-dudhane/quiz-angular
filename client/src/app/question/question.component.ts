@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { interval, Observable, Subscription } from 'rxjs';
 import { take } from 'rxjs/operators';
 
 import { Question } from '../model/question';
 import { AppData } from '../constants/AppData';
 import { QuestionService } from '../services/question.service';
+import { User } from '../model/user';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-question',
@@ -17,7 +19,7 @@ export class QuestionComponent implements OnInit {
   questions: Question[];
   currentQuestion: Question
   options: string[];
-
+  user = new User();
   isCorrect: boolean = null;
   wrongAttempt: boolean = null;
   timeWarning: boolean = null;
@@ -33,12 +35,15 @@ export class QuestionComponent implements OnInit {
   seconds: Observable<number>;
   timePerQue: Observable<number>;
   timerSubscription: Subscription;
+  userName: string = '';
 
-  constructor(private route: ActivatedRoute, private questionService: QuestionService) { }
+  constructor(private route: ActivatedRoute, private questionService: QuestionService,
+              private userService: UserService, private router: Router) { }
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
       this.section = params['section'];
+      this.userName = params['username'];
 
       this.questionService.getQuestionsBySection(this.section).subscribe( (data) => {
              this.questions = data;
@@ -128,6 +133,21 @@ export class QuestionComponent implements OnInit {
       this.attempts = 3;
     } else {
       this.quizEnd = true;
+      this.saveUserDetails()
     }
+  }
+
+  /**
+   * @function saveUserDetails
+   * @description Send User Details to service
+   */
+  saveUserDetails(){
+      this.user.marks = this.marks;
+      this.user.name = this.userName;
+      this.user.section = this.section;
+      
+      this.userService.sendUserDetails(this.user).subscribe((response) => {
+        this.router.navigate(['/welcome'])
+      })
   }
 }

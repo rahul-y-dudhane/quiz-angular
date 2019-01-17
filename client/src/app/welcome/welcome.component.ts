@@ -29,7 +29,9 @@ export class WelcomeComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if(result){
-        this.router.navigate([`/test/${section}`]);
+        console.log("this.userName",result);
+        
+        this.router.navigate([`/test/${section}/${result}`]);
       }
       
     }); 
@@ -45,7 +47,10 @@ export class WelcomeComponent implements OnInit {
 export class UserDetailsDialogComponent{
 
   constructor( public dialogRef: MatDialogRef<UserDetailsDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data : {userName:string}) { }
+    @Inject(MAT_DIALOG_DATA) public data : {userName:string}) {
+      // console.log(data);
+      
+     }
 
   onNoClick(): void {
     this.dialogRef.close();
