@@ -2,7 +2,13 @@ import { MatGridListModule,MatCardModule,
         MatListModule,
         MatPaginatorModule,
         MatIconModule,
-    MatRadioModule } from "@angular/material";
+        MatRadioModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatButtonModule,
+        MatInputModule
+
+    } from "@angular/material";
 import { NgModule } from '@angular/core';
 
 /**
@@ -16,7 +22,11 @@ import { NgModule } from '@angular/core';
         MatListModule,
         MatPaginatorModule,
         MatIconModule,
-        MatRadioModule
+        MatRadioModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatButtonModule,
+        MatInputModule
     ],
     exports:[
         MatGridListModule,
@@ -24,7 +34,11 @@ import { NgModule } from '@angular/core';
         MatListModule,
         MatPaginatorModule,
         MatIconModule,
-        MatRadioModule
+        MatRadioModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatButtonModule,
+        MatInputModule
     ]
 })
 export class MatUiComponents{

@@ -1,4 +1,7 @@
 export class AppData {
+
+   static SERVER_URL ="http://localhost:8626";
+
    static questions = [{
       section: "javascript",
       question: "JavaScript Code can be called by using?",

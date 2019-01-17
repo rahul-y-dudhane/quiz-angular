@@ -54,18 +54,15 @@
     <div fxFlex="10%" fxLayout="row" fxFlexAlign="stretch" fxLayoutAlign="center center">
       <div fxFlex="95%" fxLayoutAlign="center">
         <h5>
-          {{pageIndex + 1 }} ) {{currentQuestion.question}}
+          {{pageIndex + 1 }} ) {{currentQuestion?.question}}
         </h5>
 
       </div>
     </div>
-    <div fxFlex="70%" fxLayout="column" fxFlexAlign="stretch">
-      <div fxFlex="50%" fxLayoutAlign="center">
-        <ol type="A">
-          <li *ngFor="let option of currentQuestion.options">
-            <mat-radio-button (click)="checkAnswer(option)" value="option">{{option}}</mat-radio-button>
-          </li>
-        </ol>
+    <div fxFlex="70%" fxLayout="row" fxFlexAlign="stretch">
+      <div fxFlex="35%"></div>
+      <div fxFlex="65%" fxLayout="column" fxLayoutAlign="start start">
+            <mat-radio-button  *ngFor="let option of currentQuestion?.options" (click)="checkAnswer(option)" value="option">{{option}}</mat-radio-button>
       </div>
     </div>
   </div>

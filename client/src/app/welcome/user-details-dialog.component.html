@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Hello!</h1>
+<div mat-dialog-content>
+  <p>Please submit your name to give this test.</p>
+  <mat-form-field>
+    <input #userNameRef="ngModel" matInput [(ngModel)]="data.userName" required>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button [disabled]="userNameRef.invalid" mat-button [mat-dialog-close]="data.userName" cdkFocusInitial>Next</button>
+</div>

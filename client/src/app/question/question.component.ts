@@ -5,6 +5,7 @@ import { take } from 'rxjs/operators';
 
 import { Question } from '../model/question';
 import { AppData } from '../constants/AppData';
+import { QuestionService } from '../services/question.service';
 
 @Component({
   selector: 'app-question',
@@ -33,16 +34,21 @@ export class QuestionComponent implements OnInit {
   timePerQue: Observable<number>;
   timerSubscription: Subscription;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private questionService: QuestionService) { }
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
-      this.section = params['section'].charAt(0).toUpperCase() + params['section'].substr(1);
-      this.questions = AppData.questions.filter((item) => item.section == this.section.toLowerCase())
-      this.currentQuestion = this.questions[this.pageIndex];
-      this.seconds = interval(1000);
-      this.timePerQue = this.seconds.pipe(take(31));
-      this.startTimer();
+      this.section = params['section'];
+
+      this.questionService.getQuestionsBySection(this.section).subscribe( (data) => {
+             this.questions = data;
+             this.section = params['section'].charAt(0).toUpperCase() + params['section'].substr(1);
+             this.currentQuestion = this.questions[this.pageIndex];
+             this.seconds = interval(1000);
+             this.timePerQue = this.seconds.pipe(take(31));
+             this.startTimer();
+      })
+      // this.questions = AppData.questions.filter((item) => item.section == this.section.toLowerCase())
     })
   }
 
