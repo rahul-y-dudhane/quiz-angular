@@ -15,18 +15,19 @@
   "license": "ISC",
   "dependencies": {
     "@types/node": "7.0.22",
-    "express": "4.15.3",
-    "nodemon": "1.11.0",
+    "body-parser": "^1.14.2",
+    "clear": "0.0.1",
+    "connect": "^3.4.0",
+    "express": "^4.15.3",
     "method-override": "^2.3.5",
     "mongojs": "^2.2.2",
     "mongoose": "^4.3.4",
-    "body-parser": "^1.14.2",
-    "clear": "0.0.1",
-    "connect": "^3.4.0"
+    "nodemon": "1.11.0"
   },
   "devDependencies": {
     "@types/mocha": "2.2.41",
     "@types/node": "7.0.22",
+    "dotenv": "^6.2.0",
     "eslint": "4.0.0",
     "eslint-config-airbnb-base": "11.2.0",
     "eslint-plugin-import": "2.3.0",

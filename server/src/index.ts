@@ -1,5 +1,7 @@
 import express = require('express');
-import Middlewares = require('./config/middlewares/base');
+require('dotenv').config();
+
+import Middlewares = require('./config/middlewares/base/');
 
 const app = express();
 const port = parseInt(process.env.PORT, 10) || 5000;
