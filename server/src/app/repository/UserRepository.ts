@@ -1,4 +1,4 @@
-import IUserModel = require('../model/UserModel');
+import IUserModel = require('../model/interfaces/UserModel');
 import UserSchema = require('../dataAccess/schemas/UserSchema');
 import RepositoryBase = require('./base');
 

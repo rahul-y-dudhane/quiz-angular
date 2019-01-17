@@ -14,6 +14,7 @@ class UserRoutes {
     get routes() {
         var controller = this._UserController;
         router.get("/allUsers", controller.retrieve);
+        router.post("/user", controller.create);
 
         return router;
     }

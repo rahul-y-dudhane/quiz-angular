@@ -3,8 +3,6 @@ import HeroBusiness = require("./../app/business/HeroBusiness");
 import IBaseController = require("./interfaces/base");
 import IHeroModel = require("./../app/model/interfaces/HeroModel");
 
-
-
 class HeroController implements IBaseController <HeroBusiness> {
     
     create(req: express.Request, res: express.Response): void {
@@ -86,7 +84,6 @@ class HeroController implements IBaseController <HeroBusiness> {
                 
             }
     }
-    
         
 }
 export = HeroController; 

@@ -2,14 +2,20 @@ import express = require('express');
 import QuestionBusiness = require('../app/business/QuestionBusiness');
 import IBaseController = require('./interfaces/base');
 
-// const baseURL = "localhost:5000"
+// const baseURL = "localhost:8626"
 
 class QuestionController implements IBaseController<QuestionBusiness>{
 
     create(request: express.Request, response: express.Response): void { }
 
     update(request: express.Request, response: express.Response): void { }
-
+   
+    /**
+     * @api localhost:8626/questions
+     * @description Api for getting all questions 
+     * @param request 
+     * @param response 
+     */
     retrieve(request: express.Request, response: express.Response): void {
         try {
             var questionBusiness = new QuestionBusiness();
@@ -17,14 +23,13 @@ class QuestionController implements IBaseController<QuestionBusiness>{
                 error ? response.send({ "error": error }) : response.send(result);
             });
         }
-
         catch (e) {
             response.send({ "error": e });
         }
     }
 
     /**
-     * @api localhost:5000/questions/section
+     * @api localhost:8626/questions/section
      * @description Api for getting all questions under given section
      * @param request 
      * @param response 
@@ -39,6 +44,8 @@ class QuestionController implements IBaseController<QuestionBusiness>{
             })
         }
         catch(e){
+            console.log("In exception");
+            
             response.send({"Exception " : e})
         }
     }
