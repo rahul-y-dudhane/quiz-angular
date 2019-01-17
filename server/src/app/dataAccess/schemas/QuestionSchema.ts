@@ -1,5 +1,5 @@
 import DataAccess = require('../DataAccess');
-import  IQuestionModel = require('../../model/QuestionModel');
+import  IQuestionModel = require('../../model/interfaces/QuestionModel');
 
 var mongoose = DataAccess.mongooseInstance;
 var mongooseConnection = DataAccess.mongooseConnection;

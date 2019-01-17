@@ -6,6 +6,11 @@ class QuestionRepository extends RepositoryBase<IQuestionModel>{
     constructor(){
         super(QuestionSchema);
     }
+
+   retriveBySection(section: string, callback: (error: any, result: any) => void){
+       QuestionSchema.find({section:section}, callback);
+   }
+
 }
 Object.seal(QuestionRepository);
 export = QuestionRepository;

@@ -15,6 +15,9 @@ class QuestionBusiness implements IQuestionBusiness{
     retrieve(callback:(error: any, result: any) => void){
             this._QuestionRepository.retrieve(callback);
     }
+    retrieveBySection(section: string, callback: (error: any, result: any) => void){
+        this._QuestionRepository.retriveBySection(section, callback);
+    }
 
     delete(){}
     update(){}

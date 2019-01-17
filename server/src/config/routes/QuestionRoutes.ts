@@ -14,6 +14,7 @@ class QuestionRoutes {
     get routes() {
         var controller = this._QuestionController;
         router.get("/questions", controller.retrieve);
+        router.get("/questions/:section", controller.retriveBySection);
 
         return router;
     }
