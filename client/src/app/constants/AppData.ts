@@ -39,27 +39,27 @@ export class AppData {
    },
    {
       section: "angular",
-      question: "The type of a variable that is volatile is?",
-      answer: "Function/Method",
-      options: ["ABC", "XYZ", "PQR", "Function/Method"]
+      question: "Which of the following will need Angular testing utilities for unit testing?",
+      answer: "Components",
+      options: ["Services", "Components", "MVVM Architectural pattern", "All the above"]
    },
    {
       section: "angular",
-      question: "A hexadecimal literal begins with",
-      answer: "Function/Method",
-      options: ["RMI", "Triggering Event", "Preprocessor", "Function/Method"]
+      question: "Which of the following TestBed method is used to create an Angular component under test?",
+      answer: "createComponent",
+      options: ["createComponent", "createTestingComponent", "createComponent", "configureTestingComponent"]
    },
    {
       section: "angular",
-      question: "The generalised syntax for a real number representation is",
-      answer: "Function/Method",
-      options: ["RMI", "Triggering Event", "Preprocessor", "Function/Method"]
+      question: "Test doubles are needed when writing which of the following?",
+      answer: "Unit tests",
+      options: ["Unit tests", "createComponent", "MVVM Architectural pattern", "End-to-end tests"]
    },
    {
       section: "angular",
-      question: "Which of the following is not considered as an error in JavaScript?",
-      answer: "Function/Method",
-      options: ["RMI", "Triggering Event", "Preprocessor", "Function/Method"]
+      question: "It is recommended to write isolated unit tests for which of the following?",
+      answer: "All the above",
+      options: ["Services", "Pipes", "All the above"]
    },
    {
       section: "reactjs",
